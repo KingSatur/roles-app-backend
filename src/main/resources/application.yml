@@ -1,0 +1,33 @@
+server:
+  port: 9090
+# Second way to disable default white label handler
+#  error:
+#    whitelabel:
+#      enabled: false
+
+#  Third way to disable default white label handler
+  error:
+    path: '/error'
+
+
+
+jwt:
+  seed: 'SECRET_KEY'
+
+
+spring:
+#  First way to disable default white label handler
+#  resources:
+#    add-mappings: false
+#  mvc:
+#    throw-exception-if-no-handler-found: true
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/roles_application
+    username: postgres
+    password: password
+    initialization-mode: always
+    hikari:
+      poolName: pool
+
