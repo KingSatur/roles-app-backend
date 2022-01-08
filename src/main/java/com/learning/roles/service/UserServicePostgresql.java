@@ -94,6 +94,7 @@ public class UserServicePostgresql implements UserService, UserDetailsService {
         user.setUserId(generateUserId());
         user.setFirstName(userDto.getFirstName());
         user.setLastName(userDto.getLastName());
+        user.setEmail(userDto.getEmail());
         user.setUsername(userDto.getUserName());
         user.setJoinDate(Instant.now());
         user.setActive(userDto.isActive());
